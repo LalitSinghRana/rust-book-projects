@@ -14,11 +14,14 @@ fn main() {
     };
 
     user1.email = String::from("qwerty@gmail.com");
+    println!("{},{},{}", user1.active, user1.username, user1.sign_in_count);
 
-    let user2 = User {
+    let _ = User {
         email: String::from("zxcv@ms.com"),
         ..user1
     };
+
+    build_user(String::from("qwerty@gmail.com"), String::from("xyz@gmail.com"));
 }
 
 fn build_user(email: String, username: String) -> User {
